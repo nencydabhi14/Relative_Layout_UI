@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEFFF"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:background="#001F46"
+        android:padding="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search_card"
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="40dp">
+
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/search" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="40dp"
+                android:background="@null"
+                android:gravity="center|start"
+                android:hint="Search"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_img"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@id/search_card"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/my_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_card"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="40dp"
+            android:text="My Wallet"
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_wallet"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text="27 Nov 2018"
+            android:textColor="#8D9296"
+            android:textSize="11.5dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_card"
+            android:layout_alignEnd="@id/profile_img"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:text="$385"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_income"
+            android:layout_width="168dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/date"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start">
+
+                <ImageView
+                    android:id="@+id/icon_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/img" />
+
+                <TextView
+                    android:id="@+id/incomes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="40dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Incomes"
+                    android:textColor="#84898F"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/incomes"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="$348.02"
+                    android:textColor="#000319"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_Expense"
+            android:layout_width="168dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="165dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start">
+
+                <ImageView
+                    android:id="@+id/expence_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/img_2" />
+
+                <TextView
+                    android:id="@+id/expence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="39dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Expenses"
+                    android:textColor="#84898F"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/expence"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="$125.34"
+                    android:textColor="#000319"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="14dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="180dp"
+        app:cardCornerRadius="8dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/corner_radius" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/transation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="TRANSACTIONS"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Show all"
+                android:textColor="#EA0D4E"
+                android:textSize="15dp" />
+
+
+            <RelativeLayout
+                android:id="@+id/coner_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cdone" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/conner_davidson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/img"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Conner Davidson"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toEndOf="@id/img"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Received"
+                    android:textColor="#94979C"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="33dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="$348.02"
+                    android:textColor="#73C7B0"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/coner_one"
+                android:layout_marginTop="15dp"
+                android:background="#D6D6D6" />
+
+            <RelativeLayout
+                android:id="@+id/airline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coner_one"
+                android:layout_marginTop="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/airline_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/airline"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/airline_img"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Airline Ticket"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toEndOf="@id/airline_img"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Visa***3451"
+                    android:textColor="#94979C"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="33dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="-$172.05"
+                    android:textColor="#EA0D4E"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/airline"
+                android:layout_marginTop="15dp"
+                android:background="#D6D6D6" />
+
+
+            <RelativeLayout
+                android:id="@+id/connor_davidson_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/airline"
+                android:layout_marginTop="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cd_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/cdtwo"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/cd_img"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Conner Davidson"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toEndOf="@id/cd_img"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Visa***3451"
+                    android:textColor="#94979C"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="33dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="-$100.00"
+                    android:textColor="#EA0D4E"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/internet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/connor_davidson_two"
+                android:layout_marginTop="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/net_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="#3D69FF"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/wifi"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/net_img"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Internet"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toEndOf="@id/net_img"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Visa***3451"
+                    android:textColor="#94979C"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="33dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="-$172.05"
+                    android:textColor="#EA0D4E"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/internet"
+                android:layout_marginTop="15dp"
+                android:background="#D6D6D6" />
+
+
+            <RelativeLayout
+                android:id="@+id/gas_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/internet"
+                android:layout_marginTop="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/gas_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    app:cardCornerRadius="10dp"
+                    android:backgroundTint="#F9C309">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:src="@drawable/gas" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/gas_img"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Gas &amp; Light"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toEndOf="@id/gas_img"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Visa***3451"
+                    android:textColor="#94979C"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="33dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="-$172.05"
+                    android:textColor="#EA0D4E"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/gas_light"
+                android:layout_marginTop="15dp"
+                android:background="#D6D6D6" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
